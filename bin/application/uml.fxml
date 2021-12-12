@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.yworks.yfiles.view.GraphControl?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane prefHeight="819.0" prefWidth="1249.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <center>
+      <GraphControl fx:id="graphControl" fileIOEnabled="true" minWidth="100.0" prefHeight="619.0" prefWidth="1128.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <Pane fx:id="header" prefHeight="117.0" prefWidth="1249.0" style="-fx-background-color: F57440;" BorderPane.alignment="CENTER">
+         <children>
+            <Button fx:id="layoutButton" accessibleHelp="tree" accessibleText="Layout" layoutX="95.0" layoutY="30.0" mnemonicParsing="false" onAction="#handleButtonAction">
+            <tooltip><Tooltip text="Tree layout" /></tooltip>
+                     <graphic>
+                    <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                        <Image url="@../../images/grid.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            <Button layoutX="180.0" layoutY="30.0" mnemonicParsing="false" onAction="#saveFile">
+                       <tooltip><Tooltip text="save file" /></tooltip>
+                     <graphic>
+                    <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                        <Image url="@../../images/export.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            <Button layoutX="270.0" layoutY="30.0" mnemonicParsing="false" onAction="#openFile">
+                       <tooltip><Tooltip text="Open file" /></tooltip>
+                     <graphic>
+                    <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                        <Image url="@../../images/grid.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            <Button layoutX="360.0" layoutY="30.0" mnemonicParsing="false" onAction="#saveAsImage">
+                       <tooltip><Tooltip text="Save image" /></tooltip>
+                     <graphic>
+                    <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                        <Image url="@../../images/export.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+         </children></Pane>
+   </top>
+   <left>
+      <Pane prefHeight="619.0" prefWidth="99.0" fx:id="side" BorderPane.alignment="CENTER">
+         <children>
+
+            <Button layoutX="24.0" layoutY="30.0" mnemonicParsing="false" onAction="#createTable">
+                                   <tooltip><Tooltip text="create table" /></tooltip>
+                     <graphic>
+                    <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                        <Image url="@../../images/create_entity.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            <Button layoutX="24.0" layoutY="100.0" mnemonicParsing="false" onAction="#set1to1">
+                                   <tooltip><Tooltip text="1---1" /></tooltip>
+                     <graphic>
+                    <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                        <Image url="@../../images/relation1to1.png" />
+                    </ImageView>
+                </graphic>
+            </Button>
+            
+            
+            <Button layoutX="24.0" layoutY="170.0" mnemonicParsing="false" onAction="#set1toN">
+               <tooltip>
+                  <Tooltip text="1---N" />
+               </tooltip>
+               <graphic>
+                  <ImageView accessibleHelp="tree" accessibleText="Layout" fitHeight="50.0" fitWidth="50.0">
+                     <image>
+                        <Image url="@../../images/relation1toN.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children></Pane>
+   </left>
+</BorderPane>

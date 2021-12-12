@@ -1,0 +1,18 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+#mybutton{
+-fx-background-color: #1d1d1d;
+    -fx-text-fill: white;
+        -fx-opacity: 0.6;
+}
+
+#layoutButton{
+	-fx-max-width:50px;
+}
+
+#header{
+	-fx-background-color:#F57440;
+}
+
+#side{
+	-fx-background-color:white;
+}
